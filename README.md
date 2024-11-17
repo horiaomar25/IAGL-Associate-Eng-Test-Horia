@@ -54,7 +54,7 @@ When a new task is added through the form, the dispatch function is used to send
   - Added validation to ensure that the task input is not empty and meets length requirements.
 
 - **Connecting React Components to Redux**:
-  - Connected React components to the Redux store using the `connect` function and hooks like useDispatch
+  - Learning more about connect in Redux and how it is used.
 
 - **Styling Components**:
   - Applied CSS to style the todo list and form components.
