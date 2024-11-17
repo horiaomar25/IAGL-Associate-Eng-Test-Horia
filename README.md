@@ -1,28 +1,66 @@
 # TODO App
 
-## The task
+# Task 1
 
-We want to build a TODO web app.
+## Backend
 
-It will allow the users to keep track and organize their tasks.
+### Files
+- /repository/todo.js
+- /service/todo.js
+- server.js
 
-Your objective is to do the following user story.
+1. Added to addTodo function to the /repository/todo.js. It pushes the new task data added to the exsisting toDoList.
+2. Similarly added this to the todoServive in /service/todo.js.
+3. In server.js, I added a post request to deal with submitting task data.
+  
+## Frontend
 
-```
-As a user
-I want to be able to add a TODO item
-so I can track the things I want to do.
-```
+1. Created form component (AddToDo.js) to allow the user to input their task on to the list.
+2. Error handling so the user knows they need to write in the input to add task.
+3. User will be able to type in their task and add it to the list.
+4. User able to hightlight the task by hovering over it.
 
-The app has two parts, a frontend built in React and a Backend built in NodeJS.
+I had to create another action called addtodo action to deal with the post request in the frontend.
 
-The backend exposes an API to fetch the TODO items, that are be displayed in the page.
+In the AddToDo.js, I used dispatch to send actions to the Redux store. This was my first experience using dispatch, and it allowed me to understand how to manage state changes in Redux application. 
 
-To complete the task you will be required to work on both backend and frontend parts.
+When a new task is added through the form, the dispatch function is used to send the addTodo action to the Redux store, which then updates the state with the task item. 
 
-Please write code as you would for it to be production ready.
+## What I learnt
 
-While it isn't required to make the front end look slick and well designed we would appreciate any effort that you put into UI design and UX.
+Sure! Here are a few bullet points summarizing what you learned from working on this project, covering both the API and the frontend:
+
+### What I Learned from This Project
+
+- **Creating API Endpoints**:
+  - Implemented GET and POST routes to fetch and add todo items.
+  - Validated request data and handled errors appropriately in the API.
+
+- **In-Memory Data Storage**:
+  - Used an in-memory data structure to store and manage todo items.
+  - Understood the importance of data persistence and potential improvements for production environments.
+
+- **Service Layer Abstraction**:
+  - Created a service layer to abstract the interaction with the data repository.
+  - Ensured clean separation of concerns and improved code maintainability.
+
+- **Using Redux for State Management**:
+  - Integrated Redux to manage the application state.
+  - Defined actions and reducers to handle fetching and adding todos.
+
+- **Dispatching Actions**:
+  - Gained experience in managing state changes and updating the UI accordingly.
+
+- **Form Handling and Validation**:
+  - Implemented a form in React to add new todo items.
+  - Added validation to ensure that the task input is not empty and meets length requirements.
+
+- **Connecting React Components to Redux**:
+  - Connected React components to the Redux store using the `connect` function and hooks like useDispatch
+
+- **Styling Components**:
+  - Applied CSS to style the todo list and form components.
+  - Improved the visual appearance and user experience of the application.
 
 
 ## Starting the application
