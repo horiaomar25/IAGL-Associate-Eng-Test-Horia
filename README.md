@@ -28,8 +28,6 @@ When a new task is added through the form, the dispatch function is used to send
 
 ## What I learnt
 
-Sure! Here are a few bullet points summarizing what you learned from working on this project, covering both the API and the frontend:
-
 ### What I Learned from This Project
 
 - **Creating API Endpoints**:
