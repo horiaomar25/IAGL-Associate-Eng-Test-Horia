@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Todo from "./Todo";
 import {fetchTodos} from "../actions";
 import {connect} from "react-redux";
+import AddToDo from "./addToDo";
 
 class TodoList extends Component {
   state = {};
@@ -12,13 +13,18 @@ class TodoList extends Component {
 
   render() {
     const {todos} = this.props.data;
-    return (<ul className="todo-list">
+    return (
+      <>
+      
+      <AddToDo />
+      <section className="todo-container">
+    <ul className="todo-list">
       {todos && todos.length
         ? todos.map((todo, index) => {
           return <Todo key={`todo-${index}`} todo={todo.task}/>;
         })
         : "No todos, yay!"}
-    </ul>);
+    </ul></section></>);
   }
 }
 
